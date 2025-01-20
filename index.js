@@ -89,4 +89,7 @@ btnSave.addEventListener("click", e => {
   let { name, size, type } = file;
   console.log(name, size, type)
   worker.postMessage({ type: "SAVE_FILE", payload: { url, name, size, type } })
+  // clear inputs
+  inputFile.value = "";
+  btnSave.disabled = true;
 })
