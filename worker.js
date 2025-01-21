@@ -2,7 +2,7 @@ const opfsRoot = await navigator.storage.getDirectory();
 
 self.postMessage({ type: "WORKER_READY" })
 
-// to clear blobs (prevent memry leaks)
+// to clear blobs (prevent memory leaks)
 let createdBlobUrls = [];
 
 self.addEventListener("message", e => {
